@@ -1,0 +1,30 @@
+{
+  "name": "hails.me",
+  "version": "1.0.0",
+  "description": "Personal website of Hayley LaBrie.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "js-watch": "webpack --watch -o bin/",
+    "sass-watch": "sass --watch --no-source-map resources/sass:resources/css",
+    "build": "webpack -o bin/ && sass --no-source-map resources/sass:resources/css && echo \"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hatkey/hails.me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hatkey/hails.me/issues"
+  },
+  "homepage": "https://github.com/hatkey/hails.me#readme",
+  "dependencies": {
+    "mithril": "^2.0.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.12.3",
+    "webpack-cli": "^4.3.1"
+  }
+}
