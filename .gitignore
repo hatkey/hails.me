@@ -5,4 +5,5 @@ bin
 *.xcf
 resources/css
 !resources/css/modern-normalize.min.css
+!resources/css/twemoji.css
 *.txt
