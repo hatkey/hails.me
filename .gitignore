@@ -2,3 +2,7 @@
 node_modules
 bin
 *mithril_tutorial.js
+*.xcf
+resources/css
+!resources/css/modern-normalize.min.css
+*.txt
