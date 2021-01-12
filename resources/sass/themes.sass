@@ -1,0 +1,52 @@
+@use "sass:map"
+
+// Dark theme palette
+$dark_theme_text_faded:         #bcc2c8ff
+$dark_theme_text_main:          #e9ebedff
+$dark_theme_bg_main:            #1a1c23ff
+$dark_theme_bg_darker:          #121216ff
+$dark_theme_bg_darkest:         #09090bff
+$dark_theme_accent:             #ffd147ff
+$dark_theme_accent_light:       #ffe699ff
+
+// Light theme palette
+$light_theme_text_faded:        #1c1d22ff
+$light_theme_text_main:         #0a0a0bff
+$light_theme_bg_main:           #eaececff
+$light_theme_bg_darker:         #dfe0e2ff
+$light_theme_bg_darkest:        #c9cbcfff
+$light_theme_accent:            #e4628dff
+$light_theme_accent_light:      #ed96b3ff
+
+// Dark theme map
+$dark_theme: ()
+$dark_theme: map.set($dark_theme, "text_faded", $dark_theme_text_faded)
+$dark_theme: map.set($dark_theme, "text_main", $dark_theme_text_main)
+$dark_theme: map.set($dark_theme, "bg_main", $dark_theme_bg_main)
+$dark_theme: map.set($dark_theme, "bg_darker", $dark_theme_bg_darker)
+$dark_theme: map.set($dark_theme, "bg_darkest", $dark_theme_bg_darkest)
+$dark_theme: map.set($dark_theme, "accent", $dark_theme_accent)
+$dark_theme: map.set($dark_theme, "accent_light", $dark_theme_accent_light)
+
+// Light theme map
+$light_theme: ()
+$light_theme: map.set($light_theme, "text_faded", $light_theme_text_faded)
+$light_theme: map.set($light_theme, "text_main", $light_theme_text_main)
+$light_theme: map.set($light_theme, "bg_main", $light_theme_bg_main)
+$light_theme: map.set($light_theme, "bg_darker", $light_theme_bg_darker)
+$light_theme: map.set($light_theme, "bg_darkest", $light_theme_bg_darkest)
+$light_theme: map.set($light_theme, "accent", $light_theme_accent)
+$light_theme: map.set($light_theme, "accent_light", $light_theme_accent_light)
+
+
+// Themes map
+$themes: ()
+$themes: map.set($themes, "dark", $dark_theme)
+$themes: map.set($themes, "light", $light_theme)
+
+// Theme style rules
+@each $theme, $map in $themes
+    html.#{$theme}
+        // All themed style rules must go here!
+        body
+            background-color: map-get($map, "bg_main")
