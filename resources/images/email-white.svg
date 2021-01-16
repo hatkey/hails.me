@@ -10,11 +10,11 @@
    width="24"
    height="24"
    fill="currentColor"
-   class="bi bi-moon"
+   class="bi bi-envelope-fill"
    viewBox="0 0 24 24"
    version="1.1"
    id="svg4"
-   sodipodi:docname="moon.svg"
+   sodipodi:docname="email-white.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <metadata
      id="metadata10">
@@ -24,14 +24,14 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs8" />
   <sodipodi:namedview
-     pagecolor="#ffffff"
+     pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
@@ -39,20 +39,21 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1725"
-     inkscape:window-height="806"
+     inkscape:window-width="1491"
+     inkscape:window-height="788"
      id="namedview6"
      showgrid="false"
-     inkscape:zoom="6.5546875"
-     inkscape:cx="9.4014158"
-     inkscape:cy="14.017441"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="18.539456"
+     inkscape:cx="12.205936"
+     inkscape:cy="11.237388"
      inkscape:window-x="0"
      inkscape:window-y="28"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg4" />
+     inkscape:current-layer="svg4"
+     inkscape:document-rotation="0" />
   <path
-     fill-rule="evenodd"
-     d="M 22.529868,15.886593 A 11.142515,11.139562 0 0 1 8.1114542,1.472 11.14729,11.144336 0 0 0 12.135494,23 11.145698,11.142744 0 0 0 22.529868,15.886593 Z"
+     d="M 0.075,5.3324999 A 3,2.9999999 0 0 1 3,3 h 18 a 3,2.9999999 0 0 1 2.925,2.3324999 L 12,12.620999 Z M 0,7.0454998 V 17.701499 l 8.7045,-5.337 z m 10.1415,6.1994992 -9.855,6.0405 A 3,2.9999999 0 0 0 3,20.999999 h 18 a 3,2.9999999 0 0 0 2.712,-1.716 L 13.857,13.2435 12,14.378999 10.1415,13.2435 Z M 15.2955,12.366 24,17.701499 V 7.0454998 l -8.7045,5.3189992 z"
      id="path2"
-     style="stroke-width:1.59158" />
+     style="fill:#ffffff;fill-opacity:1;stroke-width:1.49999" />
 </svg>

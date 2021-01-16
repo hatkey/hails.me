@@ -10,11 +10,11 @@
    width="24"
    height="24"
    fill="currentColor"
-   class="bi bi-moon"
+   class="bi bi-twitter"
    viewBox="0 0 24 24"
    version="1.1"
    id="svg4"
-   sodipodi:docname="moon.svg"
+   sodipodi:docname="twitter-white.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <metadata
      id="metadata10">
@@ -31,7 +31,7 @@
   <defs
      id="defs8" />
   <sodipodi:namedview
-     pagecolor="#ffffff"
+     pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
@@ -39,20 +39,20 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1725"
-     inkscape:window-height="806"
+     inkscape:window-width="1384"
+     inkscape:window-height="813"
      id="namedview6"
      showgrid="false"
-     inkscape:zoom="6.5546875"
-     inkscape:cx="9.4014158"
-     inkscape:cy="14.017441"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="18.539456"
+     inkscape:cx="2.6644336"
+     inkscape:cy="8.7783844"
      inkscape:window-x="0"
      inkscape:window-y="28"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg4" />
   <path
-     fill-rule="evenodd"
-     d="M 22.529868,15.886593 A 11.142515,11.139562 0 0 1 8.1114542,1.472 11.14729,11.144336 0 0 0 12.135494,23 11.145698,11.142744 0 0 0 22.529868,15.886593 Z"
+     d="m 7.539,23.000311 c 9.057,0 14.0115,-8.081726 14.0115,-15.0779191 0,-0.2261527 0,-0.455536 -0.009,-0.6816887 A 10.0275,10.798788 0 0 0 24,4.4913334 9.987,10.755173 0 0 1 21.1665,5.3280981 4.9515,5.3323559 0 0 0 23.337,2.3929601 9.7995,10.553251 0 0 1 20.2065,3.6739532 4.929,5.3081253 0 0 0 11.8125,8.5103887 13.9875,15.06338 0 0 1 1.662,2.9712647 4.9335,5.3129714 0 0 0 3.189,10.049842 4.9845,5.3678942 0 0 1 0.96,9.3907686 v 0.072692 A 4.932,5.311356 0 0 0 4.908,14.66174 4.8045,5.1740491 0 0 1 3.6105,14.847508 4.845,5.2176642 0 0 1 2.6895,14.755432 4.9245,5.3032791 0 0 0 7.29,18.433643 9.882,10.642097 0 0 1 1.17,20.706477 9.48,10.209176 0 0 1 0,20.633785 14.016,15.094073 0 0 0 7.539,23.000311 Z"
      id="path2"
-     style="stroke-width:1.59158" />
+     style="stroke-width:1.55661;fill:#ffffff;fill-opacity:1" />
 </svg>
