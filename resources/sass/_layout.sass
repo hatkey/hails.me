@@ -1,0 +1,256 @@
+/* == LAYOUT == */
+%inline-block
+    display: inline-block
+%block
+    display: block
+%inline
+    display: inline
+%flex
+    display: flex
+%border-box
+    box-sizing: border-box
+$footer_min_height: 150px
+$wrapper_min_height: calc(100vh - #{$footer_min_height})
+$wrapper_width_larger: 1400px
+$wrapper_width_large: 1100px
+$wrapper_width_medium: 900px
+$wrapper_width_small: 700px
+$wrapper_width_smaller: 450px
+$wrapper_width_tiny: 350px
+$content_spacing: 100px
+
+@media screen and (min-width: 1500px)
+    #wrapper
+        width: $wrapper_width_larger
+    #about
+        width: 1050px
+    #avatar
+        text-align: right
+        width: 350px
+        img
+            width: 300px
+    ul.grid-list li
+        width: calc(#{$wrapper_width_larger} * 0.105)
+        height: calc(#{$wrapper_width_larger} * 0.105)
+        padding: calc(#{$wrapper_width_larger} * 0.01)
+        margin: calc(#{$wrapper_width_larger} * 0.01)
+    ul.album-list li
+        width: calc(#{$wrapper_width_larger} * 0.31)
+        height: calc(#{$wrapper_width_larger} * 0.31)
+        padding: calc(#{$wrapper_width_larger} * 0.01)
+        margin: calc(#{$wrapper_width_larger} * 0.01)
+@media screen and (max-width: 1499px)
+    #wrapper
+        width: $wrapper_width_large
+    #about
+        width: 750px
+    #avatar
+        text-align: right
+        width: 350px
+        img
+            width: 300px
+    ul.grid-list li
+        width: calc(#{$wrapper_width_large} * 0.105)
+        height: calc(#{$wrapper_width_large} * 0.105)
+        padding: calc(#{$wrapper_width_large} * 0.01)
+        margin: calc(#{$wrapper_width_large} * 0.01)
+    ul.album-list li
+        width: calc(#{$wrapper_width_large} * 0.31)
+        height: calc(#{$wrapper_width_large} * 0.31)
+        padding: calc(#{$wrapper_width_large} * 0.01)
+        margin: calc(#{$wrapper_width_large} * 0.01)
+@media screen and (max-width: 1200px)
+    #wrapper
+        width: $wrapper_width_medium
+    #about
+        width: 575px
+    #avatar
+        text-align: right
+        width: 325px
+        img
+            width: 300px
+    ul.grid-list li
+        width: calc(#{$wrapper_width_medium} * 0.14667)
+        height: calc(#{$wrapper_width_medium} * 0.14667)
+        padding: calc(#{$wrapper_width_medium} * 0.01)
+        margin: calc(#{$wrapper_width_medium} * 0.01)
+    ul.album-list li
+        width: calc(#{$wrapper_width_medium} * 0.31)
+        height: calc(#{$wrapper_width_medium} * 0.31)
+        padding: calc(#{$wrapper_width_medium} * 0.01)
+        margin: calc(#{$wrapper_width_medium} * 0.01)
+@media screen and (max-width: 1000px)
+    #wrapper
+        width: $wrapper_width_small
+    #about
+        width: 700px
+    #avatar
+        text-align: center
+        width: 700px
+        margin-bottom: 20px
+        img
+            width: 260px
+    ul.grid-list li
+        width: calc(#{$wrapper_width_small} * 0.23)
+        height: calc(#{$wrapper_width_small} * 0.23)
+        padding: calc(#{$wrapper_width_small} * 0.01)
+        margin: calc(#{$wrapper_width_small} * 0.01)
+    ul.album-list li
+        width: calc(#{$wrapper_width_small} * 0.48)
+        height: calc(#{$wrapper_width_small} * 0.48)
+        padding: calc(#{$wrapper_width_small} * 0.01)
+        margin: calc(#{$wrapper_width_small} * 0.01)
+@media screen and (max-width: 800px)
+    #wrapper
+        width: $wrapper_width_smaller
+    #about
+        width: 450px
+    #avatar
+        text-align: center
+        width: 450px
+        margin-bottom: 20px
+        img
+            width: 225px
+    ul.grid-list li
+        width: calc(#{$wrapper_width_smaller} * 0.31)
+        height: calc(#{$wrapper_width_smaller} * 0.31)
+        padding: calc(#{$wrapper_width_smaller} * 0.01)
+        margin: calc(#{$wrapper_width_smaller} * 0.01)
+    ul.album-list li
+        width: calc(#{$wrapper_width_smaller} * 0.48)
+        height: calc(#{$wrapper_width_smaller} * 0.48)
+        padding: calc(#{$wrapper_width_smaller} * 0.01)
+        margin: calc(#{$wrapper_width_smaller} * 0.01)
+@media screen and (max-width: 500px)
+    #wrapper
+        width: $wrapper_width_tiny
+    #about
+        width: 100%
+    #avatar
+        text-align: center
+        width: 100%
+        margin-bottom: 20px
+        img
+            width: 50%
+    ul.grid-list li
+        width: calc(#{$wrapper_width_tiny} * 0.48)
+        height: calc(#{$wrapper_width_tiny} * 0.48)
+        padding: calc(#{$wrapper_width_tiny} * 0.01)
+        margin: calc(#{$wrapper_width_tiny} * 0.01)
+    ul.album-list li
+        width: calc(#{$wrapper_width_tiny} * 0.98)
+        height: calc(#{$wrapper_width_tiny} * 0.98)
+        padding: calc(#{$wrapper_width_tiny} * 0.01)
+        margin: calc(#{$wrapper_width_tiny} * 0.01)
+
+header
+    text-align: justify
+
+#wrapper
+    margin: 0 auto
+    min-height: $wrapper_min_height
+
+header, #wrapper > section, aside#extras
+    margin: 0 auto $content_spacing auto
+    width: 100%
+
+#avatar, #about
+    float: right
+
+#avatar img
+    height: auto
+
+aside#extras
+    @extend %border-box
+    @extend %flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    section
+        margin: 5px
+        padding: 10px
+    #theme-switcher
+        text-align: center
+
+#social-links
+    margin: 0
+    padding: 0
+    li
+        display: inline-block
+
+a.social, #theme-switcher button
+    display: block
+    width: 32px
+    height: 32px
+    padding: 25px
+
+#wrapper > section
+    h2
+        margin: 10px 0 30px 0
+
+footer
+    @extend %flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    align-content: center
+    @extend %border-box
+    width: 100%
+    min-height: $footer_min_height
+    section
+        @extend %border-box
+        margin: 10px
+        padding: 20px
+
+%box-grid
+    @extend %flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: center
+    align-content: center
+    width: 100%
+    li
+        @extend %border-box
+        text-align: center
+        @extend %flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        align-content: center
+
+ul.grid-list
+    @extend %box-grid
+
+ul.album-list
+    @extend %box-grid
+    li img
+        width: 65%
+        height: auto
+        margin: 0 0 15px 0
+
+.badge-list, .badge-list-dark, .badge-list-light
+    @extend %flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: flex-start
+    align-content: flex-start
+    width: 100%
+    li
+        text-align: center
+
+.project
+    @extend %border-box
+    width: 100%
+    padding: 20px
+
+span.indicator
+    @extend %inline-block
+    width: 8px
+    height: 8px
+    margin-left: 18px
+    margin-right: 8px
