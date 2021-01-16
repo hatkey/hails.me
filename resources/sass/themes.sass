@@ -61,3 +61,95 @@ $themes: map.set($themes, map-get($light_theme, "theme_name"), $light_theme)
         // All themed style rules must go here!
         body
             background-color: map-get($map, "bg_main")
+            color: map-get($map, "text_main")
+        span
+            color: map-get($map, "text_faded")
+            font-style: italic
+        a
+            color: map-get($map, "accent")
+            &:hover
+                color: map-get($map, "text_main")
+                text-decoration-color: map-get($map, "accent_light")
+        aside#extras
+            border-bottom: 2px solid map-get($map, "bg_darker")
+            button
+                &:active
+                    background-color: map-get($map, "accent")
+                @if $theme == "dark"
+                    background-image: url("../images/sun.svg")
+                @else 
+                    background-image: url("../images/moon.svg")
+        a.social
+            background-color: map-get($map, "bg_darker")
+            &:hover
+                background-color: map-get($map, "bg_darkest")
+        a.github
+            @if $theme == "dark"
+                background-image: url("../images/github-white.svg")
+            @else 
+                background-image: url("../images/github-black.svg")
+        a.email
+            @if $theme == "dark"
+                background-image: url("../images/email-white.svg")
+            @else 
+                background-image: url("../images/email-black.svg")
+        a.twitter
+            @if $theme == "dark"
+                background-image: url("../images/twitter-white.svg")
+            @else 
+                background-image: url("../images/twitter-black.svg")
+        h6
+            color: map-get($map, "accent")
+        button
+            background-color: map-get($map, "bg_darker")
+            border-bottom: 1px solid map-get($map, "text_faded")
+            color: map-get($map, "text_faded")
+            &:hover
+                background-color: map-get($map, "bg_darkest")
+                border-bottom-color: map-get($map, "accent")
+                color: map-get($map, "text_main")
+        #avatar img
+            @if $theme == "dark"
+                filter: sepia(25%) opacity(80%) contrast(130%)
+            @else 
+                filter: sepia(25%) brightness(90%) contrast(115%)
+        #wrapper > section
+            border-top: 2px solid map-get($map, "bg_darker")
+        ul.grid-list li
+            background-color: map-get($map, "bg_darker")
+            border-bottom-color: map-get($map, "text_main")
+            &:hover
+                background-color: map-get($map, "bg_darkest")
+            &.high
+                border-bottom-color: $successStrong
+            &.medium
+                border-bottom-color: map-get($dark_theme, "accent")
+            &.low
+                border-bottom-color: $errorStrong
+        ul.album-list li
+            background-color: map-get($map, "bg_darker")
+            &:hover
+                background-color: map-get($map, "bg_darkest")
+        span.indicator-high
+            background-color: $successStrong
+            box-shadow: 0 0 2px $successStrong
+        span.indicator-medium
+            background-color: map-get($dark_theme, "accent")
+            box-shadow: 0 0 2px map-get($dark_theme, "accent")
+        span.indicator-low
+            background-color: $errorStrong
+            box-shadow: 0 0 2px $errorStrong
+        .project
+            background-color: map-get($map, "bg_darker")
+        footer
+            background-color: map-get($map, "bg_darker")
+            border-top: 2px solid map-get($map, "bg_darkest")
+            button
+                background-color: map-get($map, "bg_main")
+        .badge, .badge-list li
+            background-color: map-get($map, "bg_darker")
+        .badge-dark, .badge-list-dark li
+            background-color: map-get($map, "bg_darkest")
+        .badge-light, .badge-list-light li
+            background-color: map-get($map, "bg_main")
+
