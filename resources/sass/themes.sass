@@ -1,16 +1,24 @@
 @use "sass:map"
 
+// Shared colors
+$successWeak:                   #bbe6c6ff
+$successStrong:                 #2f7040ff
+$errorWeak:                     #e6bebeff
+$errorStrong:                   #862222ff
+$warningWeak:                   #e2e6afff
+$warningStrong:                 #867b00ff
+
 // Dark theme palette
-$dark_theme_text_faded:         #bcc2c8ff
-$dark_theme_text_main:          #e9ebedff
-$dark_theme_bg_main:            #1a1c23ff
-$dark_theme_bg_darker:          #121216ff
-$dark_theme_bg_darkest:         #09090bff
+$dark_theme_text_faded:         #848F9Aff
+$dark_theme_text_main:          #F4F5F6ff
+$dark_theme_bg_main:            #181A24ff
+$dark_theme_bg_darker:          #111117ff
+$dark_theme_bg_darkest:         #08080Aff
 $dark_theme_accent:             #ffd147ff
 $dark_theme_accent_light:       #ffe699ff
 
 // Light theme palette
-$light_theme_text_faded:        #1c1d22ff
+$light_theme_text_faded:        #40434Fff
 $light_theme_text_main:         #0a0a0bff
 $light_theme_bg_main:           #eaececff
 $light_theme_bg_darker:         #dfe0e2ff
@@ -20,6 +28,7 @@ $light_theme_accent_light:      #ed96b3ff
 
 // Dark theme map
 $dark_theme: ()
+$dark_theme: map.set($dark_theme, "theme_name", "dark")
 $dark_theme: map.set($dark_theme, "text_faded", $dark_theme_text_faded)
 $dark_theme: map.set($dark_theme, "text_main", $dark_theme_text_main)
 $dark_theme: map.set($dark_theme, "bg_main", $dark_theme_bg_main)
@@ -30,6 +39,7 @@ $dark_theme: map.set($dark_theme, "accent_light", $dark_theme_accent_light)
 
 // Light theme map
 $light_theme: ()
+$light_theme: map.set($light_theme, "theme_name", "light")
 $light_theme: map.set($light_theme, "text_faded", $light_theme_text_faded)
 $light_theme: map.set($light_theme, "text_main", $light_theme_text_main)
 $light_theme: map.set($light_theme, "bg_main", $light_theme_bg_main)
@@ -41,11 +51,12 @@ $light_theme: map.set($light_theme, "accent_light", $light_theme_accent_light)
 
 // Themes map
 $themes: ()
-$themes: map.set($themes, "dark", $dark_theme)
-$themes: map.set($themes, "light", $light_theme)
+$themes: map.set($themes, map-get($dark_theme, "theme_name"), $dark_theme)
+$themes: map.set($themes, map-get($light_theme, "theme_name"), $light_theme)
 
 // Theme style rules
 @each $theme, $map in $themes
+    /* == #{$theme} theme == */
     html.#{$theme}
         // All themed style rules must go here!
         body
