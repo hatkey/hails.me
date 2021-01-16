@@ -10,18 +10,18 @@
 %border-box
     box-sizing: border-box
 $footer_min_height: 150px
-$wrapper_min_height: calc(100vh - #{$footer_min_height})
-$wrapper_width_larger: 1400px
-$wrapper_width_large: 1100px
-$wrapper_width_medium: 900px
-$wrapper_width_small: 700px
-$wrapper_width_smaller: 450px
-$wrapper_width_tiny: 350px
+$main_min_height: calc(100vh - #{$footer_min_height})
+$main_width_larger: 1400px
+$main_width_large: 1100px
+$main_width_medium: 900px
+$main_width_small: 700px
+$main_width_smaller: 450px
+$main_width_tiny: 350px
 $content_spacing: 100px
 
 @media screen and (min-width: 1500px)
-    #wrapper
-        width: $wrapper_width_larger
+    main
+        width: $main_width_larger
     #about
         width: 1050px
     #avatar
@@ -30,18 +30,18 @@ $content_spacing: 100px
         img
             width: 300px
     ul.grid-list li
-        width: calc(#{$wrapper_width_larger} * 0.105)
-        height: calc(#{$wrapper_width_larger} * 0.105)
-        padding: calc(#{$wrapper_width_larger} * 0.01)
-        margin: calc(#{$wrapper_width_larger} * 0.01)
+        width: calc(#{$main_width_larger} * 0.105)
+        height: calc(#{$main_width_larger} * 0.105)
+        padding: calc(#{$main_width_larger} * 0.01)
+        margin: calc(#{$main_width_larger} * 0.01)
     ul.album-list li
-        width: calc(#{$wrapper_width_larger} * 0.31)
-        height: calc(#{$wrapper_width_larger} * 0.31)
-        padding: calc(#{$wrapper_width_larger} * 0.01)
-        margin: calc(#{$wrapper_width_larger} * 0.01)
+        width: calc(#{$main_width_larger} * 0.31)
+        height: calc(#{$main_width_larger} * 0.31)
+        padding: calc(#{$main_width_larger} * 0.01)
+        margin: calc(#{$main_width_larger} * 0.01)
 @media screen and (max-width: 1499px)
-    #wrapper
-        width: $wrapper_width_large
+    main
+        width: $main_width_large
     #about
         width: 750px
     #avatar
@@ -50,18 +50,18 @@ $content_spacing: 100px
         img
             width: 300px
     ul.grid-list li
-        width: calc(#{$wrapper_width_large} * 0.105)
-        height: calc(#{$wrapper_width_large} * 0.105)
-        padding: calc(#{$wrapper_width_large} * 0.01)
-        margin: calc(#{$wrapper_width_large} * 0.01)
+        width: calc(#{$main_width_large} * 0.105)
+        height: calc(#{$main_width_large} * 0.105)
+        padding: calc(#{$main_width_large} * 0.01)
+        margin: calc(#{$main_width_large} * 0.01)
     ul.album-list li
-        width: calc(#{$wrapper_width_large} * 0.31)
-        height: calc(#{$wrapper_width_large} * 0.31)
-        padding: calc(#{$wrapper_width_large} * 0.01)
-        margin: calc(#{$wrapper_width_large} * 0.01)
+        width: calc(#{$main_width_large} * 0.31)
+        height: calc(#{$main_width_large} * 0.31)
+        padding: calc(#{$main_width_large} * 0.01)
+        margin: calc(#{$main_width_large} * 0.01)
 @media screen and (max-width: 1200px)
-    #wrapper
-        width: $wrapper_width_medium
+    main
+        width: $main_width_medium
     #about
         width: 575px
     #avatar
@@ -70,18 +70,18 @@ $content_spacing: 100px
         img
             width: 300px
     ul.grid-list li
-        width: calc(#{$wrapper_width_medium} * 0.14667)
-        height: calc(#{$wrapper_width_medium} * 0.14667)
-        padding: calc(#{$wrapper_width_medium} * 0.01)
-        margin: calc(#{$wrapper_width_medium} * 0.01)
+        width: calc(#{$main_width_medium} * 0.14667)
+        height: calc(#{$main_width_medium} * 0.14667)
+        padding: calc(#{$main_width_medium} * 0.01)
+        margin: calc(#{$main_width_medium} * 0.01)
     ul.album-list li
-        width: calc(#{$wrapper_width_medium} * 0.31)
-        height: calc(#{$wrapper_width_medium} * 0.31)
-        padding: calc(#{$wrapper_width_medium} * 0.01)
-        margin: calc(#{$wrapper_width_medium} * 0.01)
+        width: calc(#{$main_width_medium} * 0.31)
+        height: calc(#{$main_width_medium} * 0.31)
+        padding: calc(#{$main_width_medium} * 0.01)
+        margin: calc(#{$main_width_medium} * 0.01)
 @media screen and (max-width: 1000px)
-    #wrapper
-        width: $wrapper_width_small
+    main
+        width: $main_width_small
     #about
         width: 700px
     #avatar
@@ -91,18 +91,18 @@ $content_spacing: 100px
         img
             width: 260px
     ul.grid-list li
-        width: calc(#{$wrapper_width_small} * 0.23)
-        height: calc(#{$wrapper_width_small} * 0.23)
-        padding: calc(#{$wrapper_width_small} * 0.01)
-        margin: calc(#{$wrapper_width_small} * 0.01)
+        width: calc(#{$main_width_small} * 0.23)
+        height: calc(#{$main_width_small} * 0.23)
+        padding: calc(#{$main_width_small} * 0.01)
+        margin: calc(#{$main_width_small} * 0.01)
     ul.album-list li
-        width: calc(#{$wrapper_width_small} * 0.48)
-        height: calc(#{$wrapper_width_small} * 0.48)
-        padding: calc(#{$wrapper_width_small} * 0.01)
-        margin: calc(#{$wrapper_width_small} * 0.01)
+        width: calc(#{$main_width_small} * 0.48)
+        height: calc(#{$main_width_small} * 0.48)
+        padding: calc(#{$main_width_small} * 0.01)
+        margin: calc(#{$main_width_small} * 0.01)
 @media screen and (max-width: 800px)
-    #wrapper
-        width: $wrapper_width_smaller
+    main
+        width: $main_width_smaller
     #about
         width: 450px
     #avatar
@@ -112,18 +112,18 @@ $content_spacing: 100px
         img
             width: 225px
     ul.grid-list li
-        width: calc(#{$wrapper_width_smaller} * 0.31)
-        height: calc(#{$wrapper_width_smaller} * 0.31)
-        padding: calc(#{$wrapper_width_smaller} * 0.01)
-        margin: calc(#{$wrapper_width_smaller} * 0.01)
+        width: calc(#{$main_width_smaller} * 0.31)
+        height: calc(#{$main_width_smaller} * 0.31)
+        padding: calc(#{$main_width_smaller} * 0.01)
+        margin: calc(#{$main_width_smaller} * 0.01)
     ul.album-list li
-        width: calc(#{$wrapper_width_smaller} * 0.48)
-        height: calc(#{$wrapper_width_smaller} * 0.48)
-        padding: calc(#{$wrapper_width_smaller} * 0.01)
-        margin: calc(#{$wrapper_width_smaller} * 0.01)
+        width: calc(#{$main_width_smaller} * 0.48)
+        height: calc(#{$main_width_smaller} * 0.48)
+        padding: calc(#{$main_width_smaller} * 0.01)
+        margin: calc(#{$main_width_smaller} * 0.01)
 @media screen and (max-width: 500px)
-    #wrapper
-        width: $wrapper_width_tiny
+    main
+        width: $main_width_tiny
     #about
         width: 100%
     #avatar
@@ -133,24 +133,24 @@ $content_spacing: 100px
         img
             width: 50%
     ul.grid-list li
-        width: calc(#{$wrapper_width_tiny} * 0.48)
-        height: calc(#{$wrapper_width_tiny} * 0.48)
-        padding: calc(#{$wrapper_width_tiny} * 0.01)
-        margin: calc(#{$wrapper_width_tiny} * 0.01)
+        width: calc(#{$main_width_tiny} * 0.48)
+        height: calc(#{$main_width_tiny} * 0.48)
+        padding: calc(#{$main_width_tiny} * 0.01)
+        margin: calc(#{$main_width_tiny} * 0.01)
     ul.album-list li
-        width: calc(#{$wrapper_width_tiny} * 0.98)
-        height: calc(#{$wrapper_width_tiny} * 0.98)
-        padding: calc(#{$wrapper_width_tiny} * 0.01)
-        margin: calc(#{$wrapper_width_tiny} * 0.01)
+        width: calc(#{$main_width_tiny} * 0.98)
+        height: calc(#{$main_width_tiny} * 0.98)
+        padding: calc(#{$main_width_tiny} * 0.01)
+        margin: calc(#{$main_width_tiny} * 0.01)
 
 header
     text-align: justify
 
-#wrapper
+main
     margin: 0 auto
-    min-height: $wrapper_min_height
+    min-height: $main_min_height
 
-header, #wrapper > section, aside#extras
+header, main > section, aside#extras
     margin: 0 auto $content_spacing auto
     width: 100%
 
@@ -186,7 +186,7 @@ a.social, #theme-switcher button
     height: 32px
     padding: 25px
 
-#wrapper > section
+main > section
     h2
         margin: 10px 0 30px 0
 
