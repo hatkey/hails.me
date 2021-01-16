@@ -1,0 +1,75 @@
+/* == DETAILS == */
+%rounded
+    border-radius: 4px
+%circle
+    border-radius: 100%
+%fast-transition
+    transition: all 0.15s ease-in-out
+%no-bullets
+    list-style-type: none
+%badge
+    @extend %rounded
+    display: inline-block
+    padding: 10px
+
+a
+    @extend %fast-transition
+
+button
+    @extend %rounded
+    @extend %fast-transition
+
+#theme-switcher
+    button
+        border: none
+
+#social-links
+    @extend %no-bullets
+
+a.social, #theme-switcher button
+    @extend %circle
+    background-position: center
+    background-repeat: no-repeat
+
+#wrapper > section
+    h2
+        &::before
+            content: "- - "
+        &::after
+            content: " - -"
+
+ul.grid-list
+    @extend %no-bullets
+    li
+        border-bottom-style: solid
+        border-bottom-width: 3px
+        @extend %rounded
+        @extend %fast-transition
+        &:hover
+            cursor: not-allowed
+            border-bottom-width: 6px
+
+ul.album-list
+    @extend %no-bullets
+    li
+        @extend %rounded
+        @extend %fast-transition
+        &:hover img
+            filter: opacity(100%)
+        img
+            @extend %fast-transition
+            filter: opacity(80%)
+
+// badges
+.badge, .badge-dark, .badge-light
+    @extend %badge
+.badge-list, .badge-list-dark, .badge-list-light
+    @extend %no-bullets
+    li
+        @extend %badge
+
+.project
+    @extend %rounded
+
+span.indicator
+    @extend %circle
