@@ -9,8 +9,8 @@ var About = {
             <h6>hiii 👋, i'm</h6>
             <h1>hayley labrie <sup class="badge">she/her</sup></h1>
             <h2>i write
-                &#8203;<a href="code.html">code</a> <a href="#">⌨️</a>
-                &#8203; and <a href="music.html">music</a> <a href="#">🎶</a>.</h2>
+                &#8203;<a href="#!/code">code</a> <a href="#!/code">⌨️</a>
+                &#8203; and <a href="#!/music">music</a> <a href="#!/music">🎶</a>.</h2>
             <br />
             <p>
                 more specifically, i'm a UGA alum with a B.S. in Computer Science
