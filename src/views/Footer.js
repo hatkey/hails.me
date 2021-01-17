@@ -5,11 +5,13 @@ var m = require("mithril");
 
 module.exports = {
     scrollToTop: () => { window.scrollTo(0, 0) },
-    oncreate: function() {
-        let btn = document.querySelector("#back-to-top button");
-        btn.addEventListener("click", this.scrollToTop);
+    oncreate: function(vnode) {
+        if (vnode.attrs.showBackToTopBtn) {
+            let btn = document.querySelector("#back-to-top button");
+            btn.addEventListener("click", this.scrollToTop);
+        }
     },
-    view: () => (
+    view: (vnode) => (
         <footer>
             <section>
                 hails.me v1.0<br />
@@ -26,11 +28,15 @@ module.exports = {
 
             {/* <Affirmation /> */}
 
-            <section id="back-to-top">
-                <button type="button">
-                    back to top ⬆️
-                </button>
-            </section>
+            {vnode.attrs.showBackToTopBtn
+                ? (
+                    <section id="back-to-top">
+                        <button type="button">
+                            back to top ⬆️
+                        </button>
+                    </section>
+                ) : null
+            }
         </footer>
     )
 };
