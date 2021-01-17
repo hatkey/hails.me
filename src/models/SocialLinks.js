@@ -2,11 +2,11 @@
 var m = require("mithril");
 
 var SocialLinks = {
-    links: {
-        "github":   "https://github.com/hatkey",
-        "email":    "mailto:hayley@hails.me",
-        "twitter":  "https://twitter.com/hatkeyy"
-    }
+    links: [
+        {name: "github", url: "https://github.com/hatkey"},
+        {name: "email", url: "mailto:hayley@hails.me"},
+        {name: "twitter", url: "https://twitter.com/hatkeyy"}
+    ]
 };
 
 module.exports = SocialLinks;
