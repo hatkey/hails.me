@@ -76,28 +76,28 @@ $themes: map.set($themes, map-get($light_theme, "theme_name"), $light_theme)
                 &:active
                     background-color: map-get($map, "accent")
                 @if $theme == "dark"
-                    background-image: url("../icons/sun.svg")
+                    background-image: url("../images/icons/sun.svg")
                 @else 
-                    background-image: url("../icons/moon.svg")
+                    background-image: url("../images/icons/moon.svg")
         a.social
             background-color: map-get($map, "bg_darker")
             &:hover
                 background-color: map-get($map, "bg_darkest")
         a.github
             @if $theme == "dark"
-                background-image: url("../icons/github-white.svg")
+                background-image: url("../images/icons/github-white.svg")
             @else 
-                background-image: url("../icons/github-black.svg")
+                background-image: url("../images/icons/github-black.svg")
         a.email
             @if $theme == "dark"
-                background-image: url("../icons/email-white.svg")
+                background-image: url("../images/icons/email-white.svg")
             @else 
-                background-image: url("../icons/email-black.svg")
+                background-image: url("../images/icons/email-black.svg")
         a.twitter
             @if $theme == "dark"
-                background-image: url("../icons/twitter-white.svg")
+                background-image: url("../images/icons/twitter-white.svg")
             @else 
-                background-image: url("../icons/twitter-black.svg")
+                background-image: url("../images/icons/twitter-black.svg")
         h6
             color: map-get($map, "accent")
         button
