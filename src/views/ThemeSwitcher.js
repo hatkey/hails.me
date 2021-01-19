@@ -3,11 +3,6 @@ var m = require("mithril");
 var Theme = require("../models/Theme");
 
 module.exports = {
-    oninit: function() {
-        Theme.loadThemeFromLocalStorage();
-        let html = document.querySelector("html");
-        html.classList.add(Theme.theme);
-    },
     toggleTheme: function() {
         let html = document.querySelector("html");
         html.classList.remove(Theme.theme);
