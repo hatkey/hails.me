@@ -4,9 +4,8 @@ const BadgeList = require("./BadgeList");
 
 module.exports = {
     view: (vnode) => (
-        <main><br /><br /><br />
         <section class="project">
-            <h4>{vnode.attrs.title}</h4>
+            <h4>{vnode.attrs.name}</h4>
 
             <BadgeList dark>
                 {
@@ -28,6 +27,6 @@ module.exports = {
                 }
             </p>
 
-        </section></main>
+        </section>
     )
 };
