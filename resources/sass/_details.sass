@@ -69,7 +69,12 @@ ul.album-list
         @extend %badge
 
 .project
+    @extend %fast-transition
     @extend %rounded
+    border-bottom-width: 2px
+    border-bottom-style: solid
+    h4
+        @extend %fast-transition
 
 span.indicator
     @extend %circle
