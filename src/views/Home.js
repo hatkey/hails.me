@@ -1,17 +1,12 @@
 // src/views/Home.js
 var m = require("mithril");
-var Extras = require("./Extras");
+var Layout = require("./Layout");
 var About = require("./About");
-var Footer = require("./Footer");
 
 module.exports = {
     view: () => (
-        <div id="page">
-            <main>
-                <Extras />
-                <About />
-            </main>
-            <Footer showBackToTopBtn={false} />
-        </div>
+        <Layout>
+            <About />
+        </Layout>
     )
 };
