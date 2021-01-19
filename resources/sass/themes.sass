@@ -54,6 +54,13 @@ $themes: ()
 $themes: map.set($themes, map-get($dark_theme, "theme_name"), $dark_theme)
 $themes: map.set($themes, map-get($light_theme, "theme_name"), $light_theme)
 
+// noscript
+noscript
+    background-color: map-get($dark_theme, "bg_main")
+    color: map-get($dark_theme, "text_main")
+    a
+        color: map-get($dark_theme, "accent")
+
 // Theme style rules
 @each $theme, $map in $themes
     /* == #{$theme} theme == */
