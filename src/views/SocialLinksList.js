@@ -1,4 +1,4 @@
-// src/views/SocialLinks.js
+// src/views/SocialLinksList.js
 var m = require("mithril");
 var SocialLinks = require("../models/SocialLinks");
 
