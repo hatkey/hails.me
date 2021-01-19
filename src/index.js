@@ -1,11 +1,10 @@
 // index.js
 var m = require("mithril");
+var Home = require("./views/Home");
+var Code = require("./views/Code");
+var Music = require("./views/Music");
 
 var root = document.body;
-
-var Home = {};
-var Code = {};
-var Music = {};
 
 // Set up routing
 m.route(root, "/home", {
