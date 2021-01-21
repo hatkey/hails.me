@@ -17,7 +17,6 @@ module.exports = {
                 />
             ))}
 
-            <br /><br />
             <p>
                 <small>
                     <strong>Note:</strong> 
