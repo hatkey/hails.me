@@ -47,9 +47,13 @@ ul.grid-list
         border-bottom-width: 3px
         @extend %rounded
         @extend %fast-transition
+        @media screen and (max-width: 500px)
+            border-bottom-width: 2px
         &:hover
             cursor: not-allowed
             border-bottom-width: 6px
+            @media screen and (max-width: 500px)
+                border-bottom-width: 4px
 
 ul.album-list
     @extend %no-bullets
