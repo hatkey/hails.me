@@ -1,6 +1,6 @@
 // src/views/Footer.js
 var m = require("mithril");
-// var Affirmation = require("./Affirmation");
+var AffirmationWidget = require("./AffirmationWidget");
 // var OnRepeat = require("./OnRepeat");
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
 
             {/* <OnRepeat /> */}
 
-            {/* <Affirmation /> */}
+            <AffirmationWidget />
 
             {vnode.attrs.showBackToTopBtn
                 ? (
