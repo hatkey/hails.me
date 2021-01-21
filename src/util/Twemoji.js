@@ -2,9 +2,6 @@
 
 var Twemoji = {
     parse: function() {
-        console.group("Twemoji:");
-        console.log("Parsing emoji...");
-
         if (twemoji) {
             twemoji.parse(document.body, {
                 callback: function(icon, options, variant) {
@@ -17,12 +14,7 @@ var Twemoji = {
                     return ''.concat(options.base, options.size, '/', icon, options.ext);
                 }
             });
-            console.log("%cdone!", "color: darkgreen; background: palegreen");
-        } else {
-            console.error("Emoji parsing failed.");
         }
-
-        console.groupEnd();
     }
 };
 

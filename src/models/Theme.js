@@ -7,10 +7,8 @@ var Theme = {
         let current_theme = localStorage.getItem("theme");
 
         if (current_theme) {
-            console.log("Using theme: " + current_theme);
             Theme.theme = current_theme;
         } else {
-            console.log("Using dark theme by default...");
             localStorage.setItem("theme", "dark");
             Theme.theme = "dark";
         }
