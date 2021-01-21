@@ -19,6 +19,8 @@ $serif: 'Source Serif Pro', 'Times New Roman', serif
 body
     font-size: 18px
     font-family: $sans-serif
+    @media screen and (max-width: 500px)
+        font-size: 16px
 
 strong, b
     font-weight: bold
@@ -39,6 +41,8 @@ h1
     @extend %headings-shared
     font-family: $serif
     font-size: 250%
+    @media screen and (max-width: 500px)
+        font-size: 190%
     sup
         @extend %monospace
         font-weight: normal
@@ -49,6 +53,8 @@ h1
 h2
     @extend %headings-shared
     font-size: 140%
+    @media screen and (max-width: 500px)
+        font-size: 115%
 
 h3
     @extend %headings-shared
