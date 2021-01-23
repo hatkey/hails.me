@@ -5,16 +5,18 @@ var Affirmation = {
     text: null,
     getAffirmation: function() {
         let self = this;
-        return m.request({
-            method: "GET",
-            url: "https://api.hails.me/wrapper/affirmations/"
-        })
-        .then(function(result) {
-            self.text = result.affirmation;
-        })
-        .catch(function(error) {
-            self.text = "Everything will be ok :)";
-        });
+        if (!self.text) {
+            return m.request({
+                method: "GET",
+                url: "https://api.hails.me/wrapper/affirmations/"
+            })
+            .then(function(result) {
+                self.text = result.affirmation;
+            })
+            .catch(function(error) {
+                self.text = "Everything will be ok :)";
+            });
+        }
     },
 };
 
