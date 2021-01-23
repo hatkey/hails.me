@@ -1,7 +1,7 @@
 // src/views/Footer.js
 var m = require("mithril");
 var AffirmationWidget = require("./AffirmationWidget");
-// var OnRepeat = require("./OnRepeat");
+var SpotifyWidget = require("./SpotifyWidget");
 
 module.exports = {
     scrollToTop: () => { window.scrollTo(0, 0) },
@@ -24,7 +24,7 @@ module.exports = {
                 emoji via <a href="https://twemoji.twitter.com">twemoji</a>.
             </section>
 
-            {/* <OnRepeat /> */}
+            <SpotifyWidget />
 
             <AffirmationWidget />
 
