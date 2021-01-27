@@ -6,7 +6,8 @@ var Avatar = {
     images: [
         "hayley_1_circle.png",
         "hayley_2_circle.png",
-        "hayley_3_circle.png"
+        "hayley_3_circle.png",
+        "hayley_4_circle.png"
     ],
     path: "resources/images/avatars/",
     getRandom: function() {
