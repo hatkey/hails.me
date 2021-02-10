@@ -1,6 +1,6 @@
 <?php
 
-namespace me\hails\common;
+namespace me\hails\common\models;
 
 class MusicTool implements \JsonSerializable {
 
