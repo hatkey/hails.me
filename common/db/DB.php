@@ -7,7 +7,7 @@ require DB_CONFIG_PATH . "/db_connect.php";
 
 abstract class DB {
 
-    private $conn = NULL;
+    protected $conn = NULL;
 
 
     public function __construct() {
