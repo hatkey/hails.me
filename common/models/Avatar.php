@@ -4,22 +4,22 @@ namespace me\hails\common\models;
 
 class Avatar implements \JsonSerializable {
 
-    private ?string $filename = NULL;
+    private ?string $src = NULL;
 
-    public function __construct(?string $filename) {
-        $this->setFilename($filename);
+    public function __construct(?string $src) {
+        $this->setSrc($src);
     }
 
-    public function getFilename() : ?string {
-        return $this->filename;
+    public function getSrc() : ?string {
+        return $this->src;
     }
 
-    public function setFilename(?string $filename) {
-        $this->filename = $filename;
+    public function setSrc(?string $src) {
+        $this->src = $src;
     }
 
     public function JsonSerialize() {
-        return $this->getFilename();
+        return $this->getSrc();
     }
 
 }
