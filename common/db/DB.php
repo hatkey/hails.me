@@ -3,7 +3,7 @@
 namespace me\hails\common\db;
 
 define("DB_CONFIG_PATH", "../../../../db_config");
-require DB_CONFIG_PATH . "/db_connect.php";
+require_once DB_CONFIG_PATH . "/db_connect.php";
 
 abstract class DB {
 
