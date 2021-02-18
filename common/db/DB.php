@@ -2,7 +2,7 @@
 
 namespace me\hails\common\db;
 
-define("DB_CONFIG_PATH", "../../../../db_config");
+define("DB_CONFIG_PATH", $_SERVER["DOCUMENT_ROOT"] . "/../db_config");
 require_once DB_CONFIG_PATH . "/db_connect.php";
 
 abstract class DB {

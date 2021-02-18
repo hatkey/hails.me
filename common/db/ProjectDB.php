@@ -2,10 +2,10 @@
 
 namespace me\hails\common\db;
 
-require_once "DB.php";
-require_once "../models/Project.php";
+require_once __DIR__ . "/DB.php";
+require_once __DIR__ . "/../models/Project.php";
 use me\hails\common\models\Project;
-require_once "../models/ProjectLink.php";
+require_once __DIR__ . "/../models/ProjectLink.php";
 use me\hails\common\models\ProjectLink;
 
 class ProjectDB extends DB {

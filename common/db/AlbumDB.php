@@ -2,8 +2,8 @@
 
 namespace me\hails\common\db;
 
-require_once "DB.php";
-require_once "../models/Album.php";
+require_once __DIR__ . "/DB.php";
+require_once __DIR__ . "/../models/Album.php";
 use me\hails\common\models\Album;
 
 class AlbumDB extends DB {

@@ -2,8 +2,8 @@
 
 namespace me\hails\common\db;
 
-require_once "DB.php";
-require_once "../models/Skill.php";
+require_once __DIR__ . "/DB.php";
+require_once __DIR__ . "/../models/Skill.php";
 use me\hails\common\models\Skill;
 
 class SkillDB extends DB {

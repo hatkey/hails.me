@@ -2,8 +2,8 @@
 
 namespace me\hails\common\db;
 
-require_once "DB.php";
-require_once "../models/MusicTool.php";
+require_once __DIR__ . "/DB.php";
+require_once __DIR__ . "/../models/MusicTool.php";
 use me\hails\common\models\MusicTool;
 
 class MusicToolDB extends DB {
