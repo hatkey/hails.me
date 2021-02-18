@@ -4,6 +4,7 @@ var GridList = require("./GridList");
 var MusicTools = require("../models/MusicTools");
 
 module.exports = {
+    oninit: () => {MusicTools.getTools()},
     view: () => (
         <section id="tools">
             <h2>tools</h2>

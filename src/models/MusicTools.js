@@ -1,24 +1,21 @@
 // src/models/MusicTools.js
+var m = require("mithril");
 
 var MusicTools = {
-    tools: [
-        "MOTU M2",
-        "Cockos REAPER",
-        "ReaPlugs",
-        "SoundToys Plugins",
-        "Waves Plugins",
-        "Fabfilter Plugins",
-        "Toneboosters Plugins",
-        "iZotope Plugins",
-        "Vladislav Goncharov Limiter No6",
-        "Helm by Matt Tytel",
-        "NI Massive",
-        "NI Kontakt",
-        "Spitfire LABS",
-        "Spitfire Originals",
-        "Magical 8-bit Plug",
-        "XLN Audio Addictive Drums"
-    ]
+    tools: [],
+    getTools: function() {
+        let self = this;
+        if (self.tools.length === 0) {
+            return m.request({
+                method: "GET",
+                url: "api/music-tools"
+            })
+            .then(function(result) {
+                self.tools = result;
+            })
+            .catch(function(error) { });
+        }
+    }
 };
 
 module.exports = MusicTools;

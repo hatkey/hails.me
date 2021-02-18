@@ -4,7 +4,12 @@ var Avatar = require("../models/Avatar");
 
 module.exports = {
     oninit: function() {
-        Avatar.getRandom();
+        if (!Avatar.src) {
+            Avatar.getAvatars()
+            .then(function() {
+                Avatar.getRandom();
+            });
+        }
     },
     view: () => (
         <section id="avatar">

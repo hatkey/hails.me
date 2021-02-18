@@ -4,6 +4,7 @@ var GridList = require("./GridList");
 var Skills = require("../models/Skills");
 
 module.exports = {
+    oninit: () => {Skills.getSkills()},
     view: () => (
         <section id="skills">
             <h2>skills</h2>

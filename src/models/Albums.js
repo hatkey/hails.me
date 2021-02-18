@@ -1,28 +1,23 @@
 // src/models/Albums.js
+var m = require("mithril");
 
 const IMG_PATH = "resources/images/albums/";
 
 var Albums = {
-    albums: [
-        {
-            name: "cv1no",
-            imgSrc: IMG_PATH + "cv1no.png",
-            tags: ["album", "electronic", "ambient"],
-            link: "https://soundcloud.com/hatkeyy/sets/cv1no"
-        },
-        {
-            name: "cv2gv",
-            imgSrc: IMG_PATH + "cv2gv.png",
-            tags: ["album", "electronic", "ambient"],
-            link: "https://soundcloud.com/hatkeyy/sets/cv2gv"
-        },
-        {
-            name: "loosies 2016",
-            imgSrc: IMG_PATH + "loosies_2016.png",
-            tags: ["compilation", "electronic", "ambient"],
-            link: "https://soundcloud.com/hatkeyy/sets/loosies-2016"
+    albums: [],
+    getAlbums: function() {
+        let self = this;
+        if (self.albums.length === 0) {
+            return m.request({
+                method: "GET",
+                url: "api/albums"
+            })
+            .then(function(result) {
+                self.albums = result;
+            })
+            .catch(function(error) { });
         }
-    ]
+    }
 };
 
 module.exports = Albums;

@@ -3,16 +3,23 @@ var m = require("mithril");
 
 var Avatar = {
     src: null,
-    images: [
-        "hayley_1_circle.png",
-        "hayley_2_circle.png",
-        "hayley_3_circle.png",
-        "hayley_4_circle.png"
-    ],
-    path: "resources/images/avatars/",
+    images: [],
+    getAvatars: function() {
+        let self = this;
+        if (self.images.length === 0) {
+            return m.request({
+                method: "GET",
+                url: "api/avatars"
+            })
+            .then(function(result) {
+                self.images = result;
+            })
+            .catch(function(error) { });
+        } else return Promise.resolve();
+    },
     getRandom: function() {
         let n = Math.floor(Math.random() * this.images.length);
-        this.src = this.path + this.images[n];
+        this.src = this.images[n];
     }
 };
 

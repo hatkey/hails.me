@@ -5,6 +5,7 @@ var AlbumList = require("./AlbumList");
 var Albums = require("../models/Albums");
 
 module.exports = {
+    oninit: () => {Albums.getAlbums()},
     view: () => (
         <section id="albums">
             <h2>albums & releases</h2>

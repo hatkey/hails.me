@@ -4,6 +4,7 @@ var Projects = require("../models/Projects");
 var Project = require("./Project");
 
 module.exports = {
+    oninit: () => {Projects.getProjects()},
     view: () => (
         <section id="projects">
             <h2>projects</h2>

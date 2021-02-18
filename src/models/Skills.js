@@ -1,33 +1,32 @@
 // src/models/Skills.js
 var m = require("mithril");
 
-let PROFICIENCIES = {
-    High:   "high",
-    Medium: "medium",
-    Low:    "low"
+let Proficiencies = {
+    HIGH:   "high",
+    MEDIUM: "medium",
+    LOW:    "low"
 }
 
 var Skills = {
-    skills: [
-        {name: "Java",          proficiency: PROFICIENCIES.High},
-        {name: "C/C++",         proficiency: PROFICIENCIES.High},
-        {name: "HTML",          proficiency: PROFICIENCIES.High},
-        {name: "(S)CSS",        proficiency: PROFICIENCIES.High},
-        {name: "JavaScript",    proficiency: PROFICIENCIES.High},
-        {name: "PHP",           proficiency: PROFICIENCIES.High},
-        {name: "Git",           proficiency: PROFICIENCIES.High},
-        {name: "REST APIs",     proficiency: PROFICIENCIES.High},
-        {name: "Mithril",       proficiency: PROFICIENCIES.Medium},
-        {name: "Spring",        proficiency: PROFICIENCIES.Medium},
-        {name: "Thymeleaf",     proficiency: PROFICIENCIES.Medium},
-        {name: "MySQL",         proficiency: PROFICIENCIES.Medium},
-        {name: "Bootstrap",     proficiency: PROFICIENCIES.Medium},
-        {name: "NPM",           proficiency: PROFICIENCIES.Medium},
-        {name: "jQuery",        proficiency: PROFICIENCIES.Low},
-        {name: "Angular",       proficiency: PROFICIENCIES.Low},
-        {name: "TypeScript",    proficiency: PROFICIENCIES.Low},
-        {name: "webpack",       proficiency: PROFICIENCIES.Low}
-    ]
+    skills: [],
+    getSkills: function() {
+        let self = this;
+        if (self.skills.length === 0) {
+            return m.request({
+                method: "GET",
+                url: "api/skills"
+            })
+            .then(function(result) {
+                result.forEach(element => {
+                    self.skills.push({
+                        name: element.name,
+                        proficiency: Proficiencies[element.proficiency]
+                    });
+                });
+            })
+            .catch(function(error) { });
+        }
+    }
 };
 
 module.exports = Skills;
