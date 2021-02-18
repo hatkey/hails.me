@@ -9,7 +9,16 @@ use me\hails\common\models\Skill;
 class SkillDB extends DB {
 
     public function getAllSkills() : array {
-        $query = "SELECT * FROM skill ORDER BY proficiency ASC, name DESC;";
+        $query = 
+            "SELECT * FROM skill
+            ORDER BY
+                proficiency ASC,
+                CASE name WHEN 'Java' THEN 0 ELSE 1 END,
+                CASE name WHEN 'HTML' THEN 0 ELSE 1 END,
+                CASE name WHEN '(S)CSS' THEN 0 ELSE 1 END,
+                CASE name WHEN 'C/C++' THEN 0 ELSE 1 END,
+                CASE name WHEN 'Mithril' THEN 0 ELSE 1 END,
+                name DESC;";
         $result = $this->conn->query($query);
         
         if (!$result || $result->num_rows < 1) return [];
