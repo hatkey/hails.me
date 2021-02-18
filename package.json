@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "js-watch": "webpack --watch -o bin/",
+    "js-watch": "webpack --mode=development --watch -o bin/",
     "sass-watch": "sass --watch --no-source-map resources/sass:resources/css",
     "build": "webpack -o bin/ && sass --no-source-map resources/sass:resources/css && echo \"\""
   },
